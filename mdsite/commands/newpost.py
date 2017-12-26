@@ -15,14 +15,14 @@ def new_post(title):
         print "Not a mdsite dir!"
         return
     # get the current date
-    now = datetime.datetime.now()
-    date = now.strftime("%Y_%m_%d")
-    post_fname = "%s_%s.md" % (date, '_'.join(title.strip().split(' ')))
+    today = datetime.date.today().strftime("%Y_%m_%d")
+    post_fname = "%s_%s.md" % (today, '_'.join(title.strip().split(' ')))
     post_fpath = os.path.join(post_dir, post_fname)
     if os.path.exists(post_fpath):
         print "File already exists!"
         return
     with open(post_fpath, 'w+'):
         print "Creating post: %s ..." % post_fname
+        return post_fpath
 
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import click
-from mdsite.commands import newsite, newpost
+from mdsite.commands import newsite, newpost, buildsite
 
 
 @click.group()
@@ -26,7 +26,9 @@ def post(title):
     """
     create a new post
     """
-    newpost.new_post(title)
+    post_fpath = newpost.new_post(title)
+    if post_fpath is not None:
+        click.edit(filename=post_fpath)
 
 
 @cli.command()
@@ -34,7 +36,7 @@ def build():
     """
     build the markdown site
     """
-    click.echo('build!')
+    buildsite.build_site()
 
 
 if __name__ == '__main__':
