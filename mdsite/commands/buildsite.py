@@ -1,11 +1,13 @@
 import os
-from mdsite.utils import postparser, homebuilder
+from mdsite.utils import postparser, homebuilder, postbuilder, temploader
 
 config = {
     'site_url': None,  # if has site_url, use absolute url
     'site_dir': 'site',
     'permalink': ':year:/:month:/:day:/:title:.html',
-    'template': None
+    'template_dir': None,
+    'site_name': 'notebook',
+    'author': 'Tiantian'
 }
 
 
@@ -24,4 +26,8 @@ def build_site():
     #     print post.title, post.date, post.url
     #     path_depth.set_base_path(post.html_path)
     if posts is not None:
-        homebuilder.home_builder(posts, config)
+        template = temploader.Template(config)
+        homebuilder.home_builder(posts, config, template)
+        # build posts
+        for post in posts:
+            postbuilder.post_builder(post, path_depth, config, template)
