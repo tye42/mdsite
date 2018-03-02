@@ -1,6 +1,7 @@
 import os
 
 # TODO template config
+# TODO change to makedirs
 
 CONFIG_TEMPLATE = """
 test config

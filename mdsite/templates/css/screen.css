@@ -44,3 +44,17 @@ ul.posts span {
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
 }
+
+.previous {
+    color: black;
+    float: left;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.next {
+    color: #a00;
+    float: right;
+    margin-right: 80px;
+    margin-top: 20px;
+}

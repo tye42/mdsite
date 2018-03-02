@@ -1,6 +1,8 @@
 import os
 from jinja2 import TemplateNotFound
 
+# TODO change to makedirs
+
 
 def home_builder(posts, config, template):
     context = {
