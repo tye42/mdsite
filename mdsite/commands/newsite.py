@@ -1,10 +1,11 @@
 import os
 
 # TODO template config
-# TODO change to makedirs
 
 CONFIG_TEMPLATE = """
-test config
+site_name: my site
+author: your name
+site_url: ""
 """
 
 

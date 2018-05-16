@@ -7,7 +7,9 @@ from mdsite.commands import newsite, newpost, buildsite
 
 @click.group()
 def cli():
-    pass
+    """
+    MdSite: Transform Markdown into static site.
+    """
 
 
 # add subcommands
@@ -15,7 +17,7 @@ def cli():
 @click.argument('mdsite_dir')
 def new(mdsite_dir):
     """
-    create a new markdown site
+    Create a new markdown site.
     """
     newsite.new_site(mdsite_dir)
 
