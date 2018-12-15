@@ -13,7 +13,7 @@ def post_builder(post, path_depth, config, template):
     path_depth.set_base_path(post.html_path)
     with open(post.path, 'r') as fh:
         md_source = fh.read()
-    content = markdown.markdown(md_source, extensions=['markdown.extensions.fenced_code'])
+    content = markdown.markdown(md_source, extensions=['markdown.extensions.fenced_code', 'mdx_math'])
     context = {
         'base_url': path_depth.relative_path('.'),
         'post': post,

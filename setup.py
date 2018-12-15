@@ -6,6 +6,9 @@ setup(
     packages=['mdsite'],
     install_requires=[
         'Click',
+        'markdown',
+        'jinja2',
+        'python-markdown-math',
     ],
     entry_points={
         'console_scripts': [
