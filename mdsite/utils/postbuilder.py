@@ -4,8 +4,8 @@ from jinja2 import TemplateNotFound
 
 # TODO replace links in markdown
 # TODO copy files recursively to dest
-# TODO render math
-# TODO render code highlight
+# DONE render math
+# DONE render code highlight
 
 
 def post_builder(post, path_depth, config, template):

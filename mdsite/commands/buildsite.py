@@ -1,17 +1,14 @@
 import os
 from mdsite.utils import postparser, homebuilder, postbuilder, temploader
+from mdsite.utils.configparser import config, load_config
 
-config = {
-    'site_url': None,  # if has site_url, use absolute url
-    'site_dir': 'site',
-    'permalink': ':year:/:month:/:day:/:title:.html',
-    'template_dir': None,
-    'site_name': 'notebook',
-    'author': 'Tiantian'
-}
-
+# TODO preload post YAML header
+# DONE parse config.yml
 
 def build_site():
+    config_file = os.path.join(os.getcwd(), 'config.yml')
+    if os.path.exists(config_file):
+        load_config(config_file, config)
     post_dir = os.path.join(os.getcwd(), 'post')
     # check if post dir exists
     if not os.path.exists(post_dir):

@@ -3,7 +3,7 @@ import os
 import shutil
 
 
-class Template:
+class Template(object):
     def __init__(self, config):
         if config['template_dir'] is not None:
             self.template_dir = config['template_dir']

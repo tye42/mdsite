@@ -9,6 +9,7 @@ setup(
         'markdown',
         'jinja2',
         'python-markdown-math',
+        'pyyaml'
     ],
     entry_points={
         'console_scripts': [

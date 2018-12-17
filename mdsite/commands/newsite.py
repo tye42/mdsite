@@ -1,11 +1,13 @@
 import os
 
-# TODO template config
+# DONE template config
 
 CONFIG_TEMPLATE = """
-site_name: my site
-author: your name
-site_url: ""
+site_name: Your Site Name
+author: Your Name
+site_url:
+permalink: :year:/:month:/:day:/:title:.html
+template_dir:
 """
 
 

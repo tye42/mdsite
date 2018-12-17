@@ -74,7 +74,7 @@ def get_post_list(post_dir, path_depth, config):
         return None
 
 
-class PathDepth:
+class PathDepth(object):
     def __init__(self):
         self.base_path = '.'
 
@@ -87,7 +87,7 @@ class PathDepth:
         return os.path.relpath(path, start=self.base_path)
 
 
-class Post:
+class Post(object):
     def __init__(self, title, date, path, path_depth, config):
         self.title = title
         self.date = date

@@ -8,7 +8,7 @@ from mdsite.commands import newsite, newpost, buildsite
 @click.group()
 def cli():
     """
-    MdSite: Transform Markdown into static site.
+    MdSite: convert Markdown files into static site.
     """
 
 
@@ -26,7 +26,7 @@ def new(mdsite_dir):
 @click.option('-t', '--title', prompt=True, help='title of the new post')
 def post(title):
     """
-    create a new post
+    Create a new post.
     """
     post_fpath = newpost.new_post(title)
     if post_fpath is not None:
@@ -36,7 +36,7 @@ def post(title):
 @cli.command()
 def build():
     """
-    build the markdown site
+    Build the markdown site.
     """
     buildsite.build_site()
 

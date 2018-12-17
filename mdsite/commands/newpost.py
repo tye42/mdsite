@@ -1,8 +1,6 @@
 import os
 import datetime
 
-# TODO template post
-
 
 def new_post(title):
     """
